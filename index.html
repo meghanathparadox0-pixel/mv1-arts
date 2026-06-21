@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edinburgh Arts Directory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Local creative guide</p>
+      <h1>Edinburgh Arts Directory</h1>
+      <p class="intro">
+        Discover art classes, exhibitions, art shops, printmakers, framing services,
+        and creative services around Edinburgh.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Search and filter listings">
+      <label for="searchInput">Search listings</label>
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search by name, area, or description"
+      >
+
+      <label for="categoryFilter">Choose a category</label>
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Art Classes">Art Classes</option>
+        <option value="Exhibitions">Exhibitions</option>
+        <option value="Art Shops">Art Shops</option>
+        <option value="Printmakers">Printmakers</option>
+        <option value="Framing">Framing</option>
+        <option value="Creative Services">Creative Services</option>
+      </select>
+    </section>
+
+    <section class="results-heading" aria-live="polite">
+      <h2>Listings</h2>
+      <p id="resultsCount">Showing 10 listings</p>
+    </section>
+
+    <section id="listingsGrid" class="listings-grid" aria-label="Arts listings">
+      <!-- JavaScript adds the listing cards here. -->
+    </section>
+
+    <section class="submit-section">
+      <h2>Submit a Listing</h2>
+      <p>
+        This form is for practice only. It does not save or send information yet.
+      </p>
+
+      <form id="submitForm" class="submit-form">
+        <label for="listingName">Listing name</label>
+        <input type="text" id="listingName" placeholder="Example: Studio Name">
+
+        <label for="listingCategory">Category</label>
+        <select id="listingCategory">
+          <option>Art Classes</option>
+          <option>Exhibitions</option>
+          <option>Art Shops</option>
+          <option>Printmakers</option>
+          <option>Framing</option>
+          <option>Creative Services</option>
+        </select>
+
+        <label for="listingArea">Area in Edinburgh</label>
+        <input type="text" id="listingArea" placeholder="Example: Leith">
+
+        <label for="listingWebsite">Website</label>
+        <input type="url" id="listingWebsite" placeholder="https://example.com">
+
+        <label for="listingDescription">Short description</label>
+        <textarea
+          id="listingDescription"
+          rows="4"
+          placeholder="Write a short description"
+        ></textarea>
+
+        <button type="submit">Submit Listing</button>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Edinburgh Arts Directory MVP - built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
